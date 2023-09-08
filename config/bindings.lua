@@ -150,6 +150,17 @@ local mouse_bindings = {
       mods = 'NONE',
       action = act.SelectTextAtMouseCursor 'Word',
    },
+   -- Turn on the mouse wheel to scroll the screen
+   {
+      event = { Down = { streak = 1, button = { WheelUp = 1 } } },
+      mods = 'NONE',
+      action = act.ScrollByCurrentEventWheelDelta,
+   },
+   {
+      event = { Down = { streak = 1, button = { WheelDown = 1 } } },
+      mods = 'NONE',
+      action = act.ScrollByCurrentEventWheelDelta,
+   },
 }
 
 return {
