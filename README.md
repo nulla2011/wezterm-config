@@ -28,5 +28,5 @@
 
 3、将解压的文件放入：`$HOME/.config/wezterm`目录底下
 
-Windows目录：C:\Users\Fizz\\.config\wezterm
+Windows目录：`C:\Users\Fizz\.config\wezterm`
 
