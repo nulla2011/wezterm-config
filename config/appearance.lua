@@ -10,7 +10,8 @@ return {
    webgpu_power_preference = 'HighPerformance',
 
    -- color scheme
-   colors = colors,
+   -- colors = colors,
+   color_scheme = "FishTank",
 
    -- background
    background = {
@@ -47,8 +48,8 @@ return {
    integrated_title_button_style = "Windows",
    integrated_title_button_color = "auto",
    integrated_title_button_alignment = "Right",
-   initial_cols = 100,
-   initial_rows = 20,
+   initial_cols = 120,
+   initial_rows = 24,
    window_padding = {
       left = 5,
       right = 10,
