@@ -44,14 +44,19 @@ local keys = {
    -- panes --
    -- panes: split panes
    {
-      key = [[\]],
-      mods = mod.SUPER,
+      key = [[/]],
+      mods = mod.SUPER_REV,
       action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
    },
    {
       key = [[\]],
       mods = mod.SUPER_REV,
       action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
+   },
+   {
+      key = [[-]],
+      mods = mod.SUPER_REV,
+      action = act.CloseCurrentPane({ confirm = true }),
    },
 
    -- panes: zoom+close pane
