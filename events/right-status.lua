@@ -5,11 +5,11 @@ local M = {}
 M.separator_char = ' '
 
 M.colors = {
-   date_fg = '#fab387',
+   date_fg = '#00ffff',
    date_bg = '#181825',
-   battery_fg = '#f9e2af',
+   battery_fg = '#2bed00',
    battery_bg = '#181825',
-   separator_fg = '#74c7ec',
+   separator_fg = '#7d4405',
    separator_bg = '#181825',
 }
 
