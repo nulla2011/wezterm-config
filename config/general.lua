@@ -5,7 +5,11 @@ return {
    exit_behavior = 'CloseOnCleanExit', -- if the shell program exited with a successful status
    status_update_interval = 1000,
 
+   -- scrollbar
    scrollback_lines = 5000,
+
+   -- paste behaviours
+   canonicalize_pasted_newlines = 'CarriageReturn',
 
    hyperlink_rules = {
       -- Matches: a URL in parens: (URL)
