@@ -21,7 +21,7 @@ M.colors = {
       fg = "#1c1b19",
    },
    is_active = {
-      bg = "#8552ff",
+      bg = "#c0ff28",
       fg = "#11111b",
    },
 
