@@ -30,3 +30,25 @@
 
 Windows目录：`C:\Users\Fizz\.config\wezterm`
 
+
+
+## 快捷键
+
+```bash
+#快捷键
+Ctrl+shift+c    --复制
+Ctrl+shift+v    --粘贴
+Ctrl+shift+r    --重命名标签栏
+Ctrl+alt+[\]    --水平拆分窗格，即左右拆分
+Ctrl+alt+[/]    --垂直拆分窗格，即上下拆分
+Ctrl+alt+[-]    --关闭当前窗格
+Ctrl+alt+z      --最大化/最小化当前窗格
+F11             --全屏
+Ctrl+alt+[↑]    --向上扩展窗格
+Ctrl+alt+[↓]    --向下扩展窗格
+Ctrl+alt+[←]    --向左扩展窗格
+Ctrl+alt+[→]    --向右扩展窗格
+Alt+[↑]         --放大字体
+Alt+[↓]         --缩小字体
+Alt+r           --重置字体大小
+```
