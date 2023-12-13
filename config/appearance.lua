@@ -14,17 +14,19 @@ return {
    color_scheme = "FishTank",
 
    -- background
-   background = {
-      {
-         source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
-      },
-      {
-         source = { Color = colors.background },
-         height = '100%',
-         width = '100%',
-         opacity = 0.85,
-      },
-   },
+   window_background_opacity = 0.95,
+   win32_system_backdrop = 'Acrylic',
+   --background = {
+   --   {
+   --      source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
+   --   },
+   --   {
+   --      source = { Color = colors.background },
+   --      height = '100%',
+   --      width = '100%',
+   --      opacity = 0.85,
+   --   },
+   --},
 
    -- scrollbar
    enable_scroll_bar = true,
