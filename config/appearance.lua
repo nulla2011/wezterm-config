@@ -11,7 +11,7 @@ return {
 
    -- color scheme
    -- colors = colors,
-   color_scheme = "FishTank",
+   color_scheme = "Gruvbox dark, medium (base16)",
 
    -- background
    window_background_opacity = 0.95,
