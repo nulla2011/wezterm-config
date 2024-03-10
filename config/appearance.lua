@@ -16,6 +16,11 @@ return {
    -- background
    window_background_opacity = 0.95,
    win32_system_backdrop = 'Acrylic',
+   window_background_gradient = {
+      colors = { '#36374F' },
+      -- Specifices a Linear gradient starting in the top left corner.
+      orientation = { Linear = { angle = -45.0 } },
+   },
    --background = {
    --   {
    --      source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
@@ -32,7 +37,7 @@ return {
    enable_scroll_bar = true,
    min_scroll_bar_height = "3cell",
    colors = {
-      scrollbar_thumb = '#454545',
+      scrollbar_thumb = '#28382D',
    },
 
    -- tab bar
@@ -64,7 +69,8 @@ return {
    },
    window_close_confirmation = 'AlwaysPrompt',
    window_frame = {
-      active_titlebar_bg = '#090909',
+      active_titlebar_bg = '#0F2536',
+      inactive_titlebar_bg = '#0F2536',
       -- font = fonts.font,
       -- font_size = fonts.font_size,
    },
