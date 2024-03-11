@@ -17,7 +17,7 @@ return {
    window_background_opacity = 0.95,
    win32_system_backdrop = 'Acrylic',
    window_background_gradient = {
-      colors = { '#1F4445' },
+      colors = { '#454766' },
       -- Specifices a Linear gradient starting in the top left corner.
       orientation = { Linear = { angle = -45.0 } },
    },
@@ -37,7 +37,7 @@ return {
    enable_scroll_bar = true,
    min_scroll_bar_height = "3cell",
    colors = {
-      scrollbar_thumb = '#1B3A3B',
+      scrollbar_thumb = '#393B54',
    },
 
    -- tab bar
