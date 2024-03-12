@@ -55,6 +55,7 @@ return {
    cursor_blink_rate = 700,
 
    -- window
+   adjust_window_size_when_changing_font_size = false,
    window_decorations = "INTEGRATED_BUTTONS|RESIZE",
    integrated_title_button_style = "Windows",
    integrated_title_button_color = "auto",
