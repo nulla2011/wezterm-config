@@ -17,16 +17,16 @@ M.cells = {}
 
 M.colors = {
    default = {
-      bg = "#589220",
+      bg = "#85248C",
       fg = "#0F2536",
    },
    is_active = {
-      bg = "#dac835",
+      bg = "#46A4A6",
       fg = "#0F2536",
    },
 
    hover = {
-      bg = "#79c92e",
+      bg = "#B531BF",
       fg = "#0F2536",
    },
 }
@@ -41,11 +41,11 @@ M.set_title = function(process_name, static_title, active_title, max_width, inse
    inset = inset or 6
 
    if process_name:len() > 0 and static_title:len() == 0 then
-      title = process_name .. " ~ " .. " "
+      title = "  " .. process_name .. " ~ " .. " "
    elseif static_title:len() > 0 then
-      title = static_title .. " ~ " .. " "
+      title = "󰴈  " .. static_title .. " ~ " .. " "
    else
-      title = active_title .. " ㉿ " .. " "
+      title = "  " .. active_title .. " ~ " .. " "
    end
 
    if title:len() > max_width - inset then
@@ -116,7 +116,7 @@ M.setup = function()
 
       -- Unseen output alert
       if has_unseen_output then
-         M.push(bg, "#FFA066", { Intensity = "Bold" }, " " .. GLYPH_CIRCLE)
+         M.push(bg, "#FF3B8B", { Intensity = "Bold" }, " " .. GLYPH_CIRCLE)
       end
 
       -- Right padding
