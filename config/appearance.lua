@@ -17,7 +17,7 @@ return {
    window_background_opacity = 1.00,
    win32_system_backdrop = 'Acrylic',
    window_background_gradient = {
-      colors = { '#2D3316', '#2C0E33' },
+      colors = { '#1D261B', '#261A25' },
       -- Specifices a Linear gradient starting in the top left corner.
       orientation = { Linear = { angle = -45.0 } },
    },
