@@ -14,10 +14,10 @@ return {
    color_scheme = "Gruvbox dark, medium (base16)",
 
    -- background
-   window_background_opacity = 0.95,
+   window_background_opacity = 1.00,
    win32_system_backdrop = 'Acrylic',
    window_background_gradient = {
-      colors = { '#121C1C', '#0B1F1F' },
+      colors = { '#2D3316', '#2C0E33' },
       -- Specifices a Linear gradient starting in the top left corner.
       orientation = { Linear = { angle = -45.0 } },
    },
@@ -37,7 +37,7 @@ return {
    enable_scroll_bar = true,
    min_scroll_bar_height = "3cell",
    colors = {
-      scrollbar_thumb = '#2A2B3D',
+      scrollbar_thumb = '#34354D',
    },
 
    -- tab bar
