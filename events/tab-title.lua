@@ -17,11 +17,11 @@ M.cells = {}
 
 M.colors = {
    default = {
-      bg = "#A62081",
+      bg = "#8C246F",
       fg = "#0F2536",
    },
    is_active = {
-      bg = "#1FA687",
+      bg = "#248C6E",
       fg = "#0F2536",
    },
 
