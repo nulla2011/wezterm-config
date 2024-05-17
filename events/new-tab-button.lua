@@ -12,7 +12,7 @@ M.setup = function()
     if default_action and button == 'Right' then
       window:perform_action(
         wezterm.action.ShowLauncherArgs({
-          title = '  Select/Search:',
+          title = '󰈲 Select/Search:',
           flags = 'FUZZY|LAUNCH_MENU_ITEMS|DOMAINS',
         }),
         pane

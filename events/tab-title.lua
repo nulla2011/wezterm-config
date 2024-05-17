@@ -6,7 +6,7 @@ local GLYPH_SEMI_CIRCLE_LEFT = ''
 -- local GLYPH_SEMI_CIRCLE_LEFT = utf8.char(0xe0b6)
 local GLYPH_SEMI_CIRCLE_RIGHT = ''
 -- local GLYPH_SEMI_CIRCLE_RIGHT = utf8.char(0xe0b4)
-local GLYPH_CIRCLE = ' '
+local GLYPH_CIRCLE = '󰇷 '
 -- local GLYPH_CIRCLE = utf8.char(0xf111)
 local GLYPH_ADMIN = '󰖳 '
 -- local GLYPH_ADMIN = utf8.char(0xfc7e)
@@ -83,7 +83,7 @@ M.setup = function()
     local process_name = M.set_process_name(tab.active_pane.foreground_process_name)
     local is_admin = M.check_if_admin(tab.active_pane.title)
     local title =
-      M.set_title(process_name, tab.tab_title, tab.active_pane.title, max_width, (is_admin and 8))
+        M.set_title(process_name, tab.tab_title, tab.active_pane.title, max_width, (is_admin and 8))
 
     if tab.is_active then
       bg = M.colors.is_active.bg
