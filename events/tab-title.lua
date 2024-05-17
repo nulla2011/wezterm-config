@@ -8,7 +8,7 @@ local GLYPH_SEMI_CIRCLE_RIGHT = ''
 -- local GLYPH_SEMI_CIRCLE_RIGHT = utf8.char(0xe0b4)
 local GLYPH_CIRCLE = ' '
 -- local GLYPH_CIRCLE = utf8.char(0xf111)
-local GLYPH_ADMIN = ' '
+local GLYPH_ADMIN = '󰖳 '
 -- local GLYPH_ADMIN = utf8.char(0xfc7e)
 
 local M = {}
@@ -43,7 +43,7 @@ M.set_title = function(process_name, static_title, active_title, max_width, inse
   if process_name:len() > 0 and static_title:len() == 0 then
     title = '  ' .. process_name .. ' ~ ' .. ' '
   elseif static_title:len() > 0 then
-    title = '  ' .. static_title .. ' ~ ' .. ' '
+    title = '󰌪  ' .. static_title .. ' ~ ' .. ' '
   else
     title = '󰌽  ' .. active_title .. ' ~ ' .. ' '
   end
