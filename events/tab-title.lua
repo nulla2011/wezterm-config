@@ -1,14 +1,14 @@
-local wezterm = require('wezterm')
+local wezterm = require("wezterm")
 
 -- Inspired by https://github.com/wez/wezterm/discussions/628#discussioncomment-1874614
 
-local GLYPH_SEMI_CIRCLE_LEFT = ''
+local GLYPH_SEMI_CIRCLE_LEFT = ""
 -- local GLYPH_SEMI_CIRCLE_LEFT = utf8.char(0xe0b6)
-local GLYPH_SEMI_CIRCLE_RIGHT = ''
+local GLYPH_SEMI_CIRCLE_RIGHT = ""
 -- local GLYPH_SEMI_CIRCLE_RIGHT = utf8.char(0xe0b4)
-local GLYPH_CIRCLE = '󰇷 '
+local GLYPH_CIRCLE = "󰇷 "
 -- local GLYPH_CIRCLE = utf8.char(0xf111)
-local GLYPH_ADMIN = '󰖳 '
+local GLYPH_ADMIN = "󰖳 "
 -- local GLYPH_ADMIN = utf8.char(0xfc7e)
 
 local M = {}
@@ -17,23 +17,23 @@ M.cells = {}
 
 M.colors = {
   default = {
-    bg = '#8C246F',
-    fg = '#0F2536',
+    bg = "#8C246F",
+    fg = "#0F2536",
   },
   is_active = {
-    bg = '#248C6E',
-    fg = '#0F2536',
+    bg = "#248C6E",
+    fg = "#0F2536",
   },
 
   hover = {
-    bg = '#786D22',
-    fg = '#0F2536',
+    bg = "#786D22",
+    fg = "#0F2536",
   },
 }
 
 M.set_process_name = function(s)
-  local a = string.gsub(s, '(.*[/\\])(.*)', '%2')
-  return a:gsub('%.exe$', '')
+  local a = string.gsub(s, "(.*[/\\])(.*)", "%2")
+  return a:gsub("%.exe$", "")
 end
 
 M.set_title = function(process_name, static_title, active_title, max_width, inset)
@@ -41,11 +41,11 @@ M.set_title = function(process_name, static_title, active_title, max_width, inse
   inset = inset or 6
 
   if process_name:len() > 0 and static_title:len() == 0 then
-    title = '  ' .. process_name .. ' ~ ' .. ' '
+    title = "  " .. process_name .. " ~ " .. " "
   elseif static_title:len() > 0 then
-    title = '󰌪  ' .. static_title .. ' ~ ' .. ' '
+    title = "󰌪  " .. static_title .. " ~ " .. " "
   else
-    title = '󰌽  ' .. active_title .. ' ~ ' .. ' '
+    title = "󰌽  " .. active_title .. " ~ " .. " "
   end
 
   if title:len() > max_width - inset then
@@ -57,7 +57,7 @@ M.set_title = function(process_name, static_title, active_title, max_width, inse
 end
 
 M.check_if_admin = function(p)
-  if p:match('^Administrator: ') then
+  if p:match("^Administrator: ") then
     return true
   end
   return false
@@ -75,15 +75,14 @@ M.push = function(bg, fg, attribute, text)
 end
 
 M.setup = function()
-  wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+  wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
     M.cells = {}
 
     local bg
     local fg
     local process_name = M.set_process_name(tab.active_pane.foreground_process_name)
     local is_admin = M.check_if_admin(tab.active_pane.title)
-    local title =
-        M.set_title(process_name, tab.tab_title, tab.active_pane.title, max_width, (is_admin and 8))
+    local title = M.set_title(process_name, tab.tab_title, tab.active_pane.title, max_width, (is_admin and 8))
 
     if tab.is_active then
       bg = M.colors.is_active.bg
@@ -105,26 +104,26 @@ M.setup = function()
     end
 
     -- Left semi-circle
-    M.push(fg, bg, { Intensity = 'Bold' }, GLYPH_SEMI_CIRCLE_LEFT)
+    M.push(fg, bg, { Intensity = "Bold" }, GLYPH_SEMI_CIRCLE_LEFT)
 
     -- Admin Icon
     if is_admin then
-      M.push(bg, fg, { Intensity = 'Bold' }, ' ' .. GLYPH_ADMIN)
+      M.push(bg, fg, { Intensity = "Bold" }, " " .. GLYPH_ADMIN)
     end
 
     -- Title
-    M.push(bg, fg, { Intensity = 'Bold' }, ' ' .. title)
+    M.push(bg, fg, { Intensity = "Bold" }, " " .. title)
 
     -- Unseen output alert
     if has_unseen_output then
-      M.push(bg, '#FF3B8B', { Intensity = 'Bold' }, ' ' .. GLYPH_CIRCLE)
+      M.push(bg, "#FF3B8B", { Intensity = "Bold" }, " " .. GLYPH_CIRCLE)
     end
 
     -- Right padding
-    M.push(bg, fg, { Intensity = 'Bold' }, ' ')
+    M.push(bg, fg, { Intensity = "Bold" }, " ")
 
     -- Right semi-circle
-    M.push(fg, bg, { Intensity = 'Bold' }, GLYPH_SEMI_CIRCLE_RIGHT)
+    M.push(fg, bg, { Intensity = "Bold" }, GLYPH_SEMI_CIRCLE_RIGHT)
 
     return M.cells
   end)
