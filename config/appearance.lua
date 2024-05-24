@@ -21,17 +21,17 @@ return {
     -- Specifices a Linear gradient starting in the top left corner.
     orientation = { Linear = { angle = -45.0 } },
   },
-  -- background = {
-  --    {
-  --       source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
-  --    },
-  --    {
-  --       source = { Color = '#1A1B26' },
-  --       height = '100%',
-  --       width = '100%',
-  --       opacity = 0.95,
-  --    },
-  -- },
+  background = {
+    {
+      source = { File = wezterm.config_dir .. "/backdrops/space.jpg" },
+    },
+    {
+      source = { Color = "#1A1B26" },
+      height = "100%",
+      width = "100%",
+      opacity = 0.95,
+    },
+  },
 
   -- scrollbar
   enable_scroll_bar = true,
