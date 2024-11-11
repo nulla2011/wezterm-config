@@ -6,11 +6,12 @@ local options = {
 }
 
 if platform.is_win then
-  options.default_prog = { "powershell" }
+  options.default_prog = { "C:/msys64/msys2_shell.cmd", '-defterm', '-where', 'C:/Code', '-no-start', '-shell', 'zsh',
+    '-mingw64' }
   options.launch_menu = {
+    { label = " Cmd", args = { "cmd" } },
     { label = " PowerShell v1", args = { "powershell" } },
     { label = " PowerShell v7", args = { "pwsh" } },
-    { label = " Cmd", args = { "cmd" } },
     { label = " Nushell", args = { "nu" } },
     {
       label = " GitBash",
